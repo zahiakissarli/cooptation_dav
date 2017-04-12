@@ -2,3 +2,7 @@ dav_coopt:
     resource: "@DavCooptBundle/Controller/"
     type:     annotation
     prefix:   /
+
+cooptations:
+    type:     rest
+    resource: Dav\CooptBundle\Controller\CooptController

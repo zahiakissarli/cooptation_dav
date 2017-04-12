@@ -286,28 +286,5 @@ class Cooptation
     {
         return $this->pjCv;
     }
-
-    /**
-     * Set idUser
-     *
-     * @param integer $idUser
-     *
-     * @return Cooptation
-     */
-    public function setIdUser($idUser)
-    {
-        $this->idUser = $idUser;
-
-        return $this;
-    }
-
-    /**
-     * Get idUser
-     *
-     * @return integer
-     */
-    public function getIdUser()
-    {
-        return $this->idUser;
-    }
 }
+
