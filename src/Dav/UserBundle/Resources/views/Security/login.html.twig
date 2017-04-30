@@ -1,0 +1,30 @@
+{# src/Dav/UserBundle/Resources/views/Security/login.html.twig #}
+
+{% extends "::base.html.twig" %}
+
+{% block body %}
+
+    {# On n'affiche le lien « Ajouter une annonce » qu'aux auteurs (et admins, qui héritent du rôle auteur) #}
+    {#{% if is_granted('ROLE_AUTEUR') %}#}
+        {#<li><a href="{{ path('oc_platform_add') }}">Ajouter une annonce</a></li>#}
+    {#{% endif %}#}
+
+    {#Bonjour {{ app.user.username }} permet de récupère le user courent#}
+
+    {# S'il y a une erreur, on l'affiche dans un joli cadre #}
+    {% if error %}
+        <div class="alert alert-danger">{{ error.message }}</div>
+    {% endif %}
+
+    {# Le formulaire, avec URL de soumission vers la route « login_check » comme on l'a vu #}
+    <form action="{{ path('login_check') }}" method="post">
+        <label for="username">Login :</label>
+        <input type="text" id="username" name="_username" value="{{ last_username }}" />
+
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password" name="_password" />
+        <br />
+        <input type="submit" value="Connexion" />
+    </form>
+
+{% endblock %}
