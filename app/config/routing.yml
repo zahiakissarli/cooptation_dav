@@ -6,3 +6,14 @@ dav_coopt:
 cooptations:
     type:     rest
     resource: Dav\CooptBundle\Controller\CooptController
+
+login:
+    path: /login
+    defaults:
+        _controller: DavUserBundle:Security:login
+
+login_check:
+    path: /login_check
+
+logout:
+    path: /logout
