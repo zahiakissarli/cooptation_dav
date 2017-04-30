@@ -1,3 +1,7 @@
+dav_user:
+    resource: "@DavUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
 dav_coopt:
     resource: "@DavCooptBundle/Controller/"
     type:     annotation
