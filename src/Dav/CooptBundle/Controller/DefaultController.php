@@ -12,6 +12,7 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
+//        var_dump($this->getUser()->getUsername());
         return $this->render('DavCooptBundle:Default:index.html.twig');
     }
 }
